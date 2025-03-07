@@ -21,7 +21,7 @@
     }
     .timer {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
     .time-segment {
       display: flex;
@@ -37,8 +37,8 @@
       align-items: center;
       width: 80px;
       height: 120px;
-      background-color: #222;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       font-size: 60px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
@@ -66,6 +66,16 @@
         transform: rotateX(180deg);
       }
     }
+    .colon {
+      font-size: 60px;
+      color: #fff;
+      margin: 0 5px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+    }
     @import url('https://fonts.googleapis.com/css2?family=Digital-7&display=swap');
   </style>
 </head>
@@ -78,18 +88,21 @@
         <span>0</span>
       </div>
     </div>
+    <div class="colon">:</div>
     <div class="time-segment">
       <div class="label">Hours</div>
       <div class="digit" id="hours">
         <span>0</span>
       </div>
     </div>
+    <div class="colon">:</div>
     <div class="time-segment">
       <div class="label">Minutes</div>
       <div class="digit" id="minutes">
         <span>0</span>
       </div>
     </div>
+    <div class="colon">:</div>
     <div class="time-segment">
       <div class="label">Seconds</div>
       <div class="digit" id="seconds">
