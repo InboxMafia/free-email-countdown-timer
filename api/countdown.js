@@ -2,7 +2,7 @@ import { createCanvas } from 'canvas';
 import GIFEncoder from 'gifencoder';
 
 export default function handler(req, res) {
-  const targetDate = new Date("Mar 31, 2025 00:00:00"); // Set your target date
+  const targetDate = new Date("Mar 31, 2025 00:00:00");
   const currentTime = new Date();
   const remainingTime = targetDate - currentTime;
 
@@ -16,7 +16,7 @@ export default function handler(req, res) {
   encoder.createReadStream().pipe(res); // Output the GIF to the response
   encoder.start();
   encoder.setRepeat(0); // 0 for infinite loop
-  encoder.setDelay(1000); // 1 second delay between frames (for the countdown)
+  encoder.setDelay(1000); // 1 second delay between frames
   encoder.setQuality(10); // Quality of the GIF
 
   // Create canvas for drawing the countdown
